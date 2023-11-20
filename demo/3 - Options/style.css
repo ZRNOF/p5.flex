@@ -1,0 +1,30 @@
+body {
+	user-select: none;
+	touch-action: none;
+	background-color: rgb(32, 32, 32);
+}
+
+#resizable-div {
+	max-width: 80%;
+	max-height: 80%;
+	min-width: 200px;
+	min-height: 200px;
+	width: 600px;
+	height: 512px;
+	padding: 20px;
+	border: 1px solid #ccc;
+	resize: both;
+	overflow: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#myContainer {
+	background-color: #ccc;
+	box-shadow: 0px 0px 15px #ccc;
+}
+
+.p5-flex-canvas {
+	box-shadow: 0px 0px 15px black;
+}

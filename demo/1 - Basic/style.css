@@ -1,0 +1,5 @@
+body {
+	user-select: none;
+	touch-action: none;
+	background-color: rgb(32, 32, 32);
+}

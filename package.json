@@ -1,0 +1,25 @@
+{
+	"name": "p5.flex",
+	"version": "0.0.0",
+	"description": "p5 container with responsive canvas feature",
+	"main": "src/p5.flex.min.mjs",
+	"types": "types/p5.flex.d.mts",
+	"repository": {
+		"url": "https://github.com/ZRNOF/p5.flex"
+	},
+	"scripts": {
+		"types": "tsc src/p5.flex.js src/p5.flex.mjs --declaration --allowJs --emitDeclarationOnly --outDir types",
+		"minify": "npm run minjs && npm run minmjs",
+		"minjs": "terser -c -m --module -o src/p5.flex.min.js src/p5.flex.js",
+		"minmjs": "terser -c -m --module -o src/p5.flex.min.mjs src/p5.flex.mjs"
+	},
+	"keywords": [
+		"p5.flex",
+		"p5",
+		"responsive",
+		"canvas",
+		"container"
+	],
+	"author": "Zaron Chen",
+	"license": "MIT"
+}
