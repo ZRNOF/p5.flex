@@ -23,8 +23,8 @@ Make sure to include `p5` first:
 Next, include `p5.flex` after `p5`. Choose one of those versions that suits your needs:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/p5.flex@0.0.1/src/p5.flex.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/p5.flex@0.0.1/src/p5.flex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/p5.flex@0.1.0/src/p5.flex.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/p5.flex@0.1.0/src/p5.flex.min.js"></script>
 ```
 
 Here's a example of using `flex()` to make your p5 canvas responsive:
@@ -63,8 +63,8 @@ function setup() {
 For using the ES6 module version of p5.flex:
 
 ```js
-import { mountFlex } from "https://cdn.jsdelivr.net/npm/p5.flex@0.0.1/src/p5.flex.mjs"
-// import { mountFlex } from "https://cdn.jsdelivr.net/npm/p5.flex@0.0.1/src/p5.flex.min.mjs" /* minify */
+import { mountFlex } from "https://cdn.jsdelivr.net/npm/p5.flex@0.1.0/src/p5.flex.mjs"
+// import { mountFlex } from "https://cdn.jsdelivr.net/npm/p5.flex@0.1.0/src/p5.flex.min.mjs" /* minify */
 
 mountFlex(p5)
 
