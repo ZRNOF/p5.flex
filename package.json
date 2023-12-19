@@ -1,6 +1,6 @@
 {
 	"name": "p5.flex",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "p5 container with responsive canvas feature",
 	"main": "src/p5.flex.min.mjs",
 	"types": "types/p5.flex.d.mts",

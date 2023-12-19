@@ -1,6 +1,6 @@
 /*!
  * p5.flex
- * Version: 0.0.0
+ * Version: 0.1.1
  * Author: Zaron Chen
  * License: MIT
  *
