@@ -23,8 +23,8 @@ Make sure to include `p5` first:
 Next, include `p5.flex` after `p5`. Choose one of those versions that suits your needs:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/p5.flex@0.1.0/src/p5.flex.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/p5.flex@0.1.0/src/p5.flex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/p5.flex@0.1.1/src/p5.flex.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/p5.flex@0.1.1/src/p5.flex.min.js"></script>
 ```
 
 Here's a example of using `flex()` to make your p5 canvas responsive:
@@ -32,12 +32,13 @@ Here's a example of using `flex()` to make your p5 canvas responsive:
 ```js
 function setup() {
   createCanvas(512, 256)
-  pixelDensity(2)
-  background("#00647f")
 
   // p5.flex!
-  // Call flex() at the end of setup
+  // Call flex() after createCanvas()
   flex()
+
+  pixelDensity(2)
+  background("#00647f")
 }
 
 function draw() {
@@ -46,7 +47,7 @@ function draw() {
 }
 ```
 
-You can see more demos [here](https://github.com/ZRNOF/p5.flex/tree/main/demo).
+See more [demos](https://github.com/ZRNOF/p5.flex/tree/main/demo) and [tutorial](https://openprocessing.org/sketch/2098443).
 
 If you're uncertain about the order of script inclusion or encounter a 'flex is not defined' error, use `mountFlex()` before `setup()` to mount `p5.flex` onto `p5`.
 
@@ -54,8 +55,9 @@ If you're uncertain about the order of script inclusion or encounter a 'flex is 
 mountFlex(p5)
 
 function setup() {
-  // ...
+  createCanvas(...canvasSize)
   flex()
+  // ...
 }
 // ...
 ```
@@ -63,15 +65,16 @@ function setup() {
 For using the ES6 module version of p5.flex:
 
 ```js
-import { mountFlex } from "https://cdn.jsdelivr.net/npm/p5.flex@0.1.0/src/p5.flex.mjs"
-// import { mountFlex } from "https://cdn.jsdelivr.net/npm/p5.flex@0.1.0/src/p5.flex.min.mjs" /* minify */
+import { mountFlex } from "https://cdn.jsdelivr.net/npm/p5.flex@0.1.1/src/p5.flex.mjs"
+// import { mountFlex } from "https://cdn.jsdelivr.net/npm/p5.flex@0.1.1/src/p5.flex.min.mjs" /* minify */
 
 mountFlex(p5)
 
 const sketch = (p) => {
   p.setup = () => {
-    // ...
+    p.createCanvas(...canvasSize)
     p.flex()
+    // ...
   }
   // ...
 }
@@ -97,11 +100,12 @@ mountFlex(p5)
 const sketch = (p) => {
   p.setup = () => {
     p.createCanvas(512, 256)
-    p.pixelDensity(2)
-    p.background("#00647f")
-
+    
     // p5.flex!
     p.flex()
+
+    p.pixelDensity(2)
+    p.background("#00647f")
   }
   p.draw = () => {
     p.fill(p.noise(p.frameCount) * 500)
