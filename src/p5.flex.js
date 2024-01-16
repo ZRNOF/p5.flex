@@ -1,10 +1,10 @@
 /*!
  * p5.flex
- * Version: 0.1.1
+ * Version: 0.2.0
  * Author: Zaron Chen
  * License: MIT
  *
- * Copyright (c) 2023 Zaron Chen
+ * Copyright (c) 2024 Zaron Chen
  */
 
 ;(() => {
@@ -231,7 +231,24 @@
 			return this._renderer.elt
 		}
 		p5.prototype.getContainer = function () {
-			return this._renderer.elt.container
+			return this.getCanvas().container
+		}
+		p5.prototype.getParent = function () {
+			return this.getContainer().parentNode
+		}
+		p5.prototype.containerBg = function (style) {
+			this.getContainer().style.background = style
+		}
+		p5.prototype.containerBgColor = function (...args) {
+			const color = this._renderer._pInst.color(...args)
+			this.getContainer().style.background = color.toString()
+		}
+		p5.prototype.parentBg = function (style) {
+			this.getParent().style.background = style
+		}
+		p5.prototype.parentBgColor = function (...args) {
+			const color = this._renderer._pInst.color(...args)
+			this.getParent().style.background = color.toString()
 		}
 		p5.prototype.NONE = "none"
 		p5.prototype.SCALE_DOWN = "scale_down"
