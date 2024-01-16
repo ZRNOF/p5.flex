@@ -23,6 +23,11 @@ declare module "p5" {
 		flex: (options?: P5FlexOptions) => void
 		getCanvas: () => HTMLCanvasElement
 		getContainer: () => HTMLDivElement
+		getParent: () => HTMLElement
+		containerBg: (style: string) => void
+		containerBgColor: (...args: any[]) => void
+		parentBg: (style: string) => void
+		parentBgColor: (...args: any[]) => void
 		NONE: "none"
 		SCALE_DOWN: "scale_down"
 	}
